@@ -102,18 +102,6 @@ public class Rectangle {
 		return "Rectangle(" + horizontal + " x " + vertical + ")";
 	}
 
-	public Vertex getBottomLeft() {
-		if (horizontal == null)
-			return null;
-		return new Vertex(horizontal.start, vertical.start);
-	}
-
-	public Object getTopRight() {
-		if (horizontal == null)
-			return null;
-		return new Vertex(horizontal.end, vertical.end);
-	}
-
 	public void accommodate(Vertex vertex) {
 		accommodate(new Rectangle(view, vertex.x, vertex.y, vertex.x, vertex.y));
 	}
