@@ -33,16 +33,6 @@ public class RectangleTest {
   }
 
   @Test
-  public void rectanglesCanBeCreated() {
-    Rectangle rect1 = new Rectangle(view);
-    assertNull(rect1.getBottomLeft());
-    assertNull(rect1.getTopRight());
-    Rectangle rect2 = new Rectangle(view, 1, 2, 3, 4);
-    assertEquals(new Vertex(1, 2), rect2.getBottomLeft());
-    assertEquals(new Vertex(3, 4), rect2.getTopRight());
-  }
-
-  @Test
   public void nonEmptyRectanglesHaveACenter() {
     Rectangle rect1 = new Rectangle(view);
     assertNull(rect1.getCenter());
